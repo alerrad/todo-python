@@ -88,5 +88,6 @@ class Task(ft.UserControl):
                 'done': self.done
             }
         )
-        tasks[ind]['done'] = not tasks[ind]['done']
+        self.done = not self.done
+        tasks[ind]['done'] = self.done
         json.dump({'tasks': tasks}, open('tasks.json', 'w'))
